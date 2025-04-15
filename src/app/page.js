@@ -23,7 +23,9 @@ const RequestForm = ({ title, onSubmit, fields, buttonText }) => {
       <form onSubmit={handleSubmit}>
         {fields.map((field) => (
           <div key={field.name} className={styles.formField}>
-            <label htmlFor={field.name}>{field.label}:</label>
+            <label htmlFor={field.name} className="text-white">
+              {field.label}:
+            </label>
             <input
               type="text"
               id={field.name}
