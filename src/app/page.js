@@ -18,12 +18,12 @@ const RequestForm = ({ title, onSubmit, fields, buttonText }) => {
   };
 
   return (
-    <div className={styles.requestForm}>
+    <div className={`${styles.requestForm} shadow-lg`}>
       <h3>{title}</h3>
       <form onSubmit={handleSubmit}>
         {fields.map((field) => (
           <div key={field.name} className={styles.formField}>
-            <label htmlFor={field.name} className="text-white">
+            <label htmlFor={field.name} className="text-[#2B2C37]">
               {field.label}:
             </label>
             <input
@@ -33,6 +33,7 @@ const RequestForm = ({ title, onSubmit, fields, buttonText }) => {
               value={formData[field.name] || ""}
               onChange={handleChange}
               required={field.required}
+              className="w-full py-3 px-2 border mt-2 rounded-lg outline-none transition-all duration-150"
             />
           </div>
         ))}
@@ -145,15 +146,15 @@ export default function Home() {
   ];
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} `}>
       <main className={styles.main}>
         <h1 className={styles.title}>CST School Information System</h1>
 
-        <div className={`${styles.connectionStatus} `}>
+        <div className={`${styles.connectionStatus} text-white`}>
           Status: {connected ? "Connected to server" : "Not connected"}
         </div>
 
-        <div className={`${styles.requestOptions} text-white`}>
+        <div className={`${styles.requestOptions} text-[#000112] shadow-lg`}>
           <div className={styles.toggleMethod}>
             <span>Search method: </span>
             <label>
@@ -177,7 +178,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.requestForms}>
+        <div className={`${styles.requestForms} `}>
           <RequestForm
             title="Request Email Address"
             onSubmit={requestEmail}
@@ -216,7 +217,7 @@ export default function Home() {
 
         <div className={styles.responses}>
           {emailResponse && (
-            <div className={styles.responseItem}>
+            <div className={`${styles.responseItem} font-bold`}>
               <h3>Email Request Result:</h3>
               {emailResponse.success ? (
                 <p>Email: {emailResponse.email}</p>

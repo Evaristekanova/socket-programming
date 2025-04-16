@@ -4,6 +4,7 @@
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: black;
+  background-color: white;
 }
 
 .main {
@@ -21,14 +22,14 @@
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
-  color: #0070f3;
+  color: #000112;
 }
 
 .connectionStatus {
   margin-bottom: 2rem;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  background-color: skyblue;
+  background-color: #000112;
   font-weight: bold;
 }
 
@@ -64,7 +65,7 @@
 .requestForm h3 {
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #0070f3;
+  color: #000112;
 }
 
 .formField {
@@ -86,7 +87,7 @@
 }
 
 .submitButton {
-  background-color: #0070f3;
+  background-color: #000112;
   color: white;
   border: none;
   border-radius: 4px;
@@ -97,7 +98,7 @@
 }
 
 .submitButton:hover {
-  background-color: #005bb5;
+  background-color: #2b2c37;
 }
 
 .responses {
@@ -117,7 +118,8 @@
 .responseItem h3 {
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #0070f3;
+  color: #635fc7;
+  font-size: large;
 }
 
 .responseItem ul {
